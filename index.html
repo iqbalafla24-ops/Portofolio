@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio - Muhammad Iqbal Afla Firmansyah</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+   body {
+      font-family: 'Segoe UI', sans-serif;
+      transition: background 0.3s, color 0.3s;
+      background-color: #f9fafb;
+   }
+/* Navbar dark mode */
+  [data-bs-theme="dark"] .navbar {
+    background: rgba(15, 23, 42, 0.95) !important;
+    backdrop-filter: blur(8px);
+  }
+  [data-bs-theme="dark"] .nav-link {
+    color: #e5e7eb !important;
+  }
+  [data-bs-theme="dark"] .nav-link:hover {
+    color: #38bdf8 !important;
+  }
+   /* Hero dengan gradasi vibrant */
+   .hero {
+      background: linear-gradient(135deg, #2563eb, #9333ea);
+      color: white;
+      padding: 120px 20px;
+      text-align: center;
+      box-shadow: inset 0 -10px 20px rgba(0,0,0,0.2);
+   }
+
+   /* Dark mode hero */
+   [data-bs-theme="dark"] .hero {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #f1f5f9;
+   }
+
+   /* Card dengan hover animasi */
+   .card {
+      border: none;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+   }
+   .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+   }
+   .card img {
+      height: 180px;
+      object-fit: cover;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+   }
+
+   /* Section background */
+   section {
+      padding: 60px 20px;
+   }
+
+   /* Skills */
+   #skills {
+      background: #f1f5f9; /* Light mode */
+   }
+   [data-bs-theme="dark"] #skills {
+      background: linear-gradient(135deg, #0f172a, #1e293b); /* Dark mode */
+      color: #f1f5f9;
+   }
+
+   /* Contact */
+   #contact {
+      background: #f9fafb; /* Light mode */
+   }
+   [data-bs-theme="dark"] #contact {
+      background: linear-gradient(135deg, #0f172a, #1e293b); /* Dark mode */
+      color: #f1f5f9;
+   }
+
+    /* Timeline style */
+    .timeline {
+      border-left: 3px solid #3b82f6;
+      padding-left: 25px;
+    }
+    .timeline-item {
+      position: relative;
+    }
+    .timeline-dot {
+      width: 16px;
+      height: 16px;
+    }
+    [data-bs-theme="dark"] .timeline {
+      border-left: 3px solid #9333ea; /* Warna timeline saat dark mode */
+    }
+   /* Footer */
+   footer {
+      background: #e5e7eb;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      color: #374151;
+   }
+   [data-bs-theme="dark"] footer {
+      background: #0f172a;
+      color: #9ca3af;
+   }
+
+   /* Dark mode global */
+   [data-bs-theme="dark"] body {
+      background-color: #0f172a;
+      color: #e5e7eb;
+   }
+
+  /* Tombol dark mode dengan animasi */
+  .dark-toggle {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease, background 0.3s ease;
+  }
+  .dark-toggle:active {
+    transform: rotate(360deg) scale(1.2);
+    background: rgba(59, 130, 246, 0.2);
+  }
+
+  /* Tombol primary di dark mode */
+  [data-bs-theme="dark"] .btn-primary {
+    background: linear-gradient(90deg, #3b82f6, #9333ea);
+    border: none;
+    transition: all 0.3s ease;
+  }
+  [data-bs-theme="dark"] .btn-primary:hover {
+    background: linear-gradient(90deg, #2563eb, #7e22ce);
+    box-shadow: 0 0 12px #9333ea;
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="#">Iqbal Afla</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Keahlian</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Proyek</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+          <li class="nav-item ms-3">
+            <button id="darkToggle" class="btn btn-outline-secondary btn-sm dark-toggle">🌙</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<section class="hero" data-aos="fade-up"> 
+  <img src="assets/assets/pass foto.jpg" alt="Foto Muhammad Iqbal Afla Firmansyah" 
+       class="rounded-circle me-3"
+       style="width: 130px; height: 130px; object-fit: cover;">
+  <h1 class="fw-bold">Muhammad Iqbal Afla Firmansyah</h1> 
+  <p class="lead">Data Analyst | Business Analyst | Software Engineering Enthusiast</p> 
+</section>
+
+
+
+  <!-- Tentang -->
+  <section id="about" class="container py-5" data-aos="fade-right">
+    <h2 class="fw-bold text-center mb-4">Tentang Saya</h2>
+    <p class="text-center">
+       Lulusan Universitas Dian Nuswantoro Prodi Sistem Informasi (PSDKU Kota Kediri) dengan pengalaman MSIB di RevoU (Data & Software Engineering). 
+       Terbiasa dengan SQL, Python, Excel, serta pembuatan dashboard dan aplikasi sederhana. 
+       Saya memiliki ketertarikan pada analisis data dan pengembangan sistem, dengan fokus pada bagaimana teknologi dapat membantu pengambilan keputusan bisnis. 
+       Terbiasa bekerja dalam tim, komunikatif, dan selalu berusaha mengembangkan kemampuan melalui proyek nyata maupun pembelajaran mandiri. 
+       Tujuan saya adalah berkontribusi dalam memberikan solusi berbasis data yang bermanfaat dan berdampak positif.
+    </p>
+  </section>
+
+  <!-- Keahlian -->
+  <section id="skills" class="py-5" data-aos="fade-left">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-4">Keahlian Utama</h2>
+      <div class="row text-center">
+        <div class="col-md-3"><span class="fw-bold">SQL</span><br><small>Database Query</small></div>
+        <div class="col-md-3"><span class="fw-bold">Python</span><br><small>Pandas, Streamlit</small></div>
+        <div class="col-md-3"><span class="fw-bold">Web Dev</span><br><small>HTML, CSS, JS</small></div>
+        <div class="col-md-3"><span class="fw-bold">UI/UX</span><br><small>Figma, Prototyping</small></div>
+      </div>
+    </div>
+  </section>
+  <!-- Pengalaman & Sertifikasi -->
+  <section id="experience" class="py-5" data-aos="fade-up">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-5">Pengalaman & Sertifikasi</h2>
+      <div class="row">
+        
+        <!-- Kolom Pengalaman -->
+        <div class="col-md-6">
+          <h4 class="fw-bold mb-4 text-primary">Pengalaman</h4>
+          <div class="timeline position-relative">
+
+            <div class="timeline-item mb-5 ps-5 position-relative">
+              <div class="timeline-dot bg-primary position-absolute start-0 top-0 translate-middle rounded-circle"></div>
+              <h5 class="fw-bold mb-1">Bank Muamalat – Magang</h5>
+              <small class="text-muted">Agustus – September 2024</small>
+              <p class="mt-2">
+                • Analisis data transaksi untuk efisiensi administrasi.<br>
+                • Membuat mini database Excel untuk pengarsipan data.<br>
+                • Bekerja sama dalam tim operasional perbankan.
+              </p>
+            </div>
+
+            <div class="timeline-item mb-5 ps-5 position-relative">
+              <div class="timeline-dot bg-primary position-absolute start-0 top-0 translate-middle rounded-circle"></div>
+              <h5 class="fw-bold mb-1">RevoU – MSIB Batch 5</h5>
+              <small class="text-muted">2023</small>
+              <p class="mt-2">
+                • Program intensif Data & Software Engineering.<br>
+                • Membuat dashboard interaktif & aplikasi sederhana.<br>
+                • Berkolaborasi dalam proyek tim.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Kolom Sertifikasi -->
+        <div class="col-md-6">
+          <h4 class="fw-bold mb-4 text-success">Sertifikasi</h4>
+          <div class="timeline position-relative">
+
+            <div class="timeline-item mb-5 ps-5 position-relative">
+              <div class="timeline-dot bg-success position-absolute start-0 top-0 translate-middle rounded-circle"></div>
+              <h5 class="fw-bold mb-1">BNSP Database Administrator</h5>
+              <small class="text-muted">2024</small>
+              <p class="mt-2">
+                Sertifikasi nasional yang membuktikan kompetensi dalam administrasi database dan manajemen SQL.
+              </p>
+            </div>
+
+            <div class="timeline-item mb-5 ps-5 position-relative">
+              <div class="timeline-dot bg-success position-absolute start-0 top-0 translate-middle rounded-circle"></div>
+              <h5 class="fw-bold mb-1">MySkill – UI/UX Design Series</h5>
+              <small class="text-muted">2023</small>
+              <p class="mt-2">
+                Pelatihan intensif desain antarmuka dan pengalaman pengguna menggunakan Figma.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Proyek -->
+  <section id="projects" class="container py-5">
+    <h2 class="fw-bold text-center mb-4" data-aos="fade-up">Proyek Pilihan</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+        <div class="card shadow-sm">
+          <img src="assets/assets/logo looker studio.png" class="card-img-top" alt="Dasboard">
+          <div class="card-body">
+            <h5 class="card-title">Dashboard Analisis</h5>
+            <p class="card-text">Dashboard interaktif untuk analisis.</p>
+            <a href="project/dashboard.html" class="btn btn-primary btn-sm">Lihat Proyek</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card shadow-sm">
+          <img src="assets/assets/logo sreamlit.png" class="card-img-top" alt="Sentiment">
+          <div class="card-body">
+            <h5 class="card-title">Sentiment Analysis App</h5>
+            <p class="card-text">Aplikasi Streamlit untuk analisis sentimen dari data teks.</p>
+            <a href="project/sentimen.html" class="btn btn-primary btn-sm">Lihat Proyek</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="400">
+        <div class="card shadow-sm">
+          <img src="assets/assets/logo uiux.png" class="card-img-top" alt="UI/UX">
+          <div class="card-body">
+            <h5 class="card-title">UI/UX</h5>
+            <p class="card-text">Desain prototipe e-commerce website menggunakan Figma.</p>
+            <a href="project/uiux.html" class="btn btn-primary btn-sm">Lihat Proyek</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="contact" class="py-5" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Kontak</h2>
+      <p>📧 <a href="mailto:iqbalafla24@gmail.com">iqbalafla24@gmail.com</a></p>
+      <p>🔗 <a href="https://linkedin.com/in/iqbal-afla" target="_blank">LinkedIn</a> | 
+         💻 <a href="https://github.com/iqbalafla24-ops" target="_blank">GitHub</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="text-muted small mb-0">© 2025 Muhammad Iqbal Afla Firmansyah. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+   // Dark Mode Toggle + Animasi
+    const toggleBtn = document.getElementById("darkToggle");
+    const htmlTag = document.documentElement;
+    
+    toggleBtn.addEventListener("click", () => {
+      // animasi putar
+      toggleBtn.style.transform = "rotate(360deg) scale(1.2)";
+      setTimeout(() => {
+        toggleBtn.style.transform = "rotate(0deg) scale(1)";
+      }, 400);
+
+      if (htmlTag.getAttribute("data-bs-theme") === "light") {
+        htmlTag.setAttribute("data-bs-theme", "dark");
+        toggleBtn.textContent = "☀️";
+      } else {
+        htmlTag.setAttribute("data-bs-theme", "light");
+        toggleBtn.textContent = "🌙";
+      }
+    });
+  </script>
+</body>
+</html>
